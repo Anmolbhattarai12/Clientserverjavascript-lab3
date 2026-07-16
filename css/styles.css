@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+html {
+    font-family: sans-serif;
+    font-size: 200%;
+    transition: all 1s;
+}
+
+body {
+    text-align: center;
+}
