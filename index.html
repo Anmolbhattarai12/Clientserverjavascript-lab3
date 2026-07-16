@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Lab 3 | COMP1073 Client-Side JavaScript</title>
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h1>Countdown</h1>
+    <!-- STEP 2: Build an HTML element here to display the countdown value -->
+    <p id="countdown"></p>
+
+    <script>
+        // STEP 1: Open this page in a browser tab and open up the console
+
+        // STEP 2: Add an HTML element above (e.g. a <p>) to contain the counter value,
+        // then declare a variable here to select it from the DOM (e.g. var p = ...)
+        var countdown = document.querySelector("#countdown");
+
+        // STEP 3: Add a condition with an IF statement inside the setTimeout callback
+        // that checks if the countdown is zero — if it is, output "Blastoff!" to the HTML element.
+        // Otherwise, output the current value of i.
+
+        // STEP 4: Change the background color of the page using a SWITCH statement:
+        // yellow when i reaches 8, orange when i reaches 4, red when i reaches 0
+
+        for (let i = 10; i >= 0; i--) {
+            setTimeout(function () {
+                console.log(i);
+
+                // STEP 3 — if/else goes here
+                if (i === 0) {
+                    countdown.textContent = "Blastoff!";
+                } else {
+                    countdown.textContent = i;
+                }
+
+                // STEP 4 — switch goes here
+                switch (i) {
+                    case 8:
+                        document.documentElement.style.backgroundColor = "yellow";
+                        break;
+
+                    case 4:
+                        document.documentElement.style.backgroundColor = "orange";
+                        break;
+
+                    case 0:
+                        document.documentElement.style.backgroundColor = "red";
+                        break;
+                }
+
+            }, 10000 - 1000 * i);
+        }
+    </script>
+</body>
+
+</html>
